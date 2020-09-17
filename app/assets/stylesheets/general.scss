@@ -1,0 +1,122 @@
+body {
+    background: url("https://i.pinimg.com/originals/61/91/c9/6191c99422741e299a94ba304cb497ce.jpg")no-repeat center center fixed;
+    font-family: 'Kaushan Script', cursive;
+    background-size: 100vw 100vh;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .pizarra{
+    background: url(pizarra) no-repeat center center;
+    background-size: 1300px 100%;
+    width: 100vw ;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 7%;
+  }
+
+  .contenedor-pizarra{
+    margin-top: -4%;
+  }
+/////////////////////////////////////////////////////////////////
+  .paper{
+    background: url(paper) no-repeat center center;
+    background-size: 1000px 100%;
+    width: 100vw ;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .contenedor-paper{
+    margin-top: -2%;
+    padding-bottom: 5%;
+  }
+
+
+//////////////////////////////////////////////////////////////////
+  .cartel2{
+    background: url(table2) no-repeat center center;
+    background-size: 200px 100%;
+    width: 15vw ;
+    height: auto;
+    -webkit-transition:all 0.9s ease; /* Safari & Chrome */ 
+    transition:all 0.9s ease; 
+    text-align: center;
+    margin: 1px;
+  }
+
+  .contenedor-cartel2{
+    overflow:hidden;
+    width: 15vw ;
+    text-align: center;
+    padding: 0%;
+  }
+
+  .contenedor-cartel2:hover .cartel2{
+      -webkit-transform:scale(1.1);transform:scale(1.1);
+  }
+
+//////////////////////////////////////////////////////////////////
+
+.cartelTable{
+  background: url(table2) no-repeat center center;
+  background-size: 8vh 100%;
+  width: 5vw ;
+  height: auto;
+  -webkit-transition:all 0.9s ease; /* Safari & Chrome */
+  transition:all 0.9s ease;
+  text-align: center;
+  margin: 03px;
+  padding: 0px;
+}
+
+.contenedor-cartelTable{
+  overflow:hidden;
+  width: 5vw ;
+  text-align: center;
+  padding: 0%;
+  margin: 0%;
+}
+
+.contenedor-cartelTable:hover .cartelTable{
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+}
+
+/////////////////////////////////////////////////////////////////////////@at-root
+
+.skip-style{
+  background: none;
+  border: none;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//////////////////////////////////////////////////////////////////
+.cartel1{
+  background: url(table) no-repeat center center;
+  background-size: 200px 100%;
+  width: 15vw ;
+  height: auto;
+  -webkit-transition:all 0.9s ease; /* Safari & Chrome */ 
+  transition:all 0.9s ease; 
+  text-align: center;
+  margin: 1px;
+}
+
+.contenedor-cartel1{
+  overflow:hidden;
+  width: 15vw ;
+  text-align: center;
+  padding: 0%;
+}
+
+.contenedor-cartel1:hover .cartel1{
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+}

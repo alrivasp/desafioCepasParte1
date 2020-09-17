@@ -1,0 +1,21 @@
+
+<div class="contenedor-paper mb-5">
+    <div class="Container paper p-5 mb-5">
+
+        <h1>Editar Vino</h1>
+
+        <%= render 'form', wine: @wine %>
+
+        <div class="container contenedor-cartel2 ">
+          <div class="container btn cartel2 p-4 ">
+            <%= link_to 'Ver', @wine , class:"text-decoration-none text-white" %>
+          </div>
+        </div>
+
+        <div class="container contenedor-cartel2 ">
+          <div class="container btn cartel2 p-4 ">
+            <%= link_to 'Volver', wines_path , class:"text-decoration-none text-white" %>
+          </div>
+        </div>
+    </div>
+</div>

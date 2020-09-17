@@ -1,0 +1,31 @@
+
+<div class="contenedor-paper">
+    <div class="Container paper p-5 ">
+
+        <p class="h4">
+          <strong>Nombre Cepa:</strong>
+            <%= @strain.name %>
+        </p>
+
+        <p class="h4">
+          <strong>Disponible:</strong>
+          <% if @strain.available %>
+            SI
+          <% else %>
+            NO
+          <% end %>
+        </p>
+
+        <div class="container contenedor-cartel2 ">
+          <div class="container btn cartel2 p-4 ">
+            <%= link_to 'Editar', edit_strain_path(@strain), class:"text-decoration-none text-white" %>
+          </div>
+        </div>
+
+        <div class="container contenedor-cartel2 ">
+          <div class="container btn cartel2 p-4 ">
+            <%= link_to 'Volver', strains_path, class:"text-decoration-none text-white" %>
+          </div>
+        </div>
+    </div>
+</div>

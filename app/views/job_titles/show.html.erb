@@ -1,0 +1,22 @@
+
+<div class="contenedor-paper">
+    <div class="Container paper p-5 ">
+
+        <p class="h4">
+          <strong>Nombre Cargo:</strong>
+          <%= @job_title.name %>
+        </p>
+
+        <div class="container contenedor-cartel2 ">
+          <div class="container btn cartel2 p-4 ">
+            <%= link_to 'Editar', edit_job_title_path(@job_title), class:"text-decoration-none text-white" %>
+          </div>
+        </div>
+
+        <div class="container contenedor-cartel2 ">
+          <div class="container btn cartel2 p-4 ">
+            <%= link_to 'Volver', job_titles_path, class:"text-decoration-none text-white" %>
+          </div>
+        </div>
+    </div>
+</div>

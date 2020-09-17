@@ -1,0 +1,51 @@
+<nav class="navbar navbar-dark bg-dark mx-auto d-block p-3">
+    <div class="">
+        <div class="row justify-content-center align-items-center">
+        <% if user_signed_in? %>
+            <% if current_user.admin %>
+            <div class="col-2 ">
+                <div class="container contenedor-cartel1 text-right">
+                    <div class="container btn cartel1 p-2 text-center">
+                        <%= link_to 'Cepas', strains_path, class:"text-decoration-none text-white center"  %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 ">
+                <div class="container contenedor-cartel1">
+                    <div class="container btn cartel1 p-2 text-center">
+                        <%= link_to 'Enologos', oenologists_path, class:"text-decoration-none text-white center"  %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        <% end %>
+            <div class="col-2 text-center pl-4">
+                <%= link_to (image_tag ("https://www.peterpaulwines.com/wp-content/uploads/2017/03/logo_peter_paul.png"), 
+                            class: '', alt: "Title Peter",  style:"width: 200px" ),
+                            wines_path
+                %>
+            </div>
+        <% if user_signed_in? %>
+            <% if current_user.admin %>
+            <div class="col-2 ">
+                <div class="container contenedor-cartel1">
+                    <div class="container btn cartel1 p-2 text-center">
+                        <%= link_to 'Cargos', job_titles_path, class:"text-decoration-none text-white center"  %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 ">
+                <div class="container contenedor-cartel1">
+                    <div class="container btn cartel1 p-2 text-center">
+                        <%= link_to 'Revistas', megazines_path, class:"text-decoration-none text-white center"  %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 dropdown">
+               <%= link_to '<i class="fas fa-sign-out-alt"></i>&nbsp;Cerrar Sesion'.html_safe , destroy_user_session_path, method: :delete, class: "text-center font-weight-bolder border-white text-white pl-2 pr-2" %>
+            </div>
+            <% end %>    
+        <% end %>    
+        </div>
+    </div>
+</nav>

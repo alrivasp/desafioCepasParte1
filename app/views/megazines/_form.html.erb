@@ -1,0 +1,24 @@
+<%= form_with(model: megazine, local: true) do |form| %>
+  <% if megazine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(megazine.errors.count, "error") %> prohibited this megazine from being saved:</h2>
+
+      <ul>
+      <% megazine.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name , "Nombre"%>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="container actions contenedor-cartel2 ">
+    <div class="container btn cartel2 p-4 ">
+      <%= form.submit class: 'text-decoration-none text-white skip-style' %>
+    </div>
+  </div>
+<% end %>

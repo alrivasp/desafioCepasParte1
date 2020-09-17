@@ -1,0 +1,56 @@
+
+
+<div class="contenedor-paper">
+    <div class="Container paper p-5 ">
+        <h1>Cepas</h1>
+        <div class="row justify-content-around align-items-center">
+          <table class="col-6 h6">
+            <thead>
+              <tr class="border-bottom border-dark">
+                <th>Name</th>
+                <th>Available</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @strains.each do |strain| %>
+                <tr class="border-bottom border-dark">
+                  <td><%= strain.name %></td>
+                  <td>
+                      <% if strain.available %>
+                        SI
+                      <% else %>
+                        NO
+                      <% end %>
+                  </td>
+                  <td class="container contenedor-cartelTable">
+                    <div class="container btn cartelTable p-2">
+                      <%= link_to 'Ver', strain, class:"text-decoration-none text-white" %>
+                    </div>
+                  </td>
+                  <td class="container contenedor-cartelTable">
+                    <div class="container btn cartelTable p-2">
+                      <%= link_to 'Editar',  edit_strain_path(strain), class:"text-decoration-none text-white" %>
+                    </div>
+                  </td>
+                  <td class="container contenedor-cartelTable">
+                    <div class="container btn cartelTable p-2">
+                      <%= link_to 'Eliminar',  strain , method: :delete, data: { confirm: 'Estas Seguro?' }, class:"text-decoration-none text-white" %>
+                    </div>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        
+        <br>
+
+        <div class="container contenedor-cartel2 ">
+          <div class="container btn cartel2 p-4 ">
+            <%= link_to 'Nueva Cepa', new_strain_path, class:"text-decoration-none text-white" %>
+          </div>
+        </div>
+    </div>
+</div>
